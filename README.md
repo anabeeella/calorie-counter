@@ -37,3 +37,7 @@ The calculateCalories(e) function is invoked when the user submits the form to c
 ### 6. Clearing Form
 
 The clearForm() function resets the form by clearing all input fields and hiding the output display.
+
+# Usage
+
+To play the game, simply open the index.html file in your web browser. You can also follow this link: https://calorie-counter-by-anabeeella.netlify.app/
