@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Calorie Counter by @anabeeella</title>
+    <link rel="icon" type="image/x-icon" href="favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+    </header>
+    <main>
+        <h1>Calorie Counter</h1>
+        <div class="container">
+            <div class="instruction">
+                <p><span class="step">1. Set Your Daily Budget:</span>Begin by entering your daily calorie
+                    budget that
+                    represents the total number of calories you aim to consume in a day.<br><br></p>
+                <p><span class="step">2. Log Your Entries:</span>Select the type of entry you want to add from the
+                    dropdown
+                    menu. Then, input the name and calorie count for each item consumed or activity completed.
+                    Repeat this step for each meal or exercise session throughout the day.<br><br>
+                </p>
+                <p><span class="step">3. Calculate Remaining Calories: </span>Once you've logged all your entries,
+                    click the
+                    "Calculate Remaining Calories". The app will automatically compute your consumed calories and deduct
+                    them from
+                    your budget. You'll then see your remaining calories displayed, helping you stay within your daily
+                    target.</p>
+            </div>
+            <form id="calorie-counter">
+                <div class="budget-content">
+                    <label for="budget">1. Budget</label><br>
+                    <input type="number" min="0" id="budget" placeholder="Insert a number for daily calorie budget"
+                        required />
+                </div>
+                <div class="controls-content">
+                    <label for="entry-dropdown">2. Select and add food or exercise:</label>
+                    <div class="controls">
+                        <select id="entry-dropdown" name="options">
+                            <option value="breakfast" selected>Breakfast</option>
+                            <option value="lunch">Lunch</option>
+                            <option value="dinner">Dinner</option>
+                            <option value="snacks">Snacks</option>
+                            <option value="exercise">Exercise</option>
+                        </select>
+                        <button type="button" id="add-entry" class="primary">+</button>
+                    </div>
+                </div>
+
+                <fieldset id="breakfast" class="hide">
+                    <legend>Breakfast</legend>
+                    <div class="input-container"></div>
+                </fieldset>
+                <fieldset id="lunch" class="hide">
+                    <legend>Lunch</legend>
+                    <div class="input-container"></div>
+                </fieldset>
+                <fieldset id="dinner" class="hide">
+                    <legend>Dinner</legend>
+                    <div class="input-container"></div>
+                </fieldset>
+                <fieldset id="snacks" class="hide">
+                    <legend>Snacks</legend>
+                    <div class="input-container"></div>
+                </fieldset>
+                <fieldset id="exercise" class="hide">
+                    <legend>Exercise</legend>
+                    <div class="input-container"></div>
+                </fieldset>
+                <div class="actions">
+                    <button type="button" id="clear" class="secondary hide">Clear</button>
+                    <button type="submit" id="submit" class="primary hide">Calculate Remaining Calories</button>
+                </div>
+            </form>
+        </div>
+        <div id="output" class="output hide"></div>
+    </main>
+    <footer>
+        <p>made by @anabeeella</p>
+    </footer>
+    <script src="./script.js"></script>
+</body>
+
+</html>
